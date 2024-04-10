@@ -34,8 +34,9 @@ document.querySelector('#subscribe')?.addEventListener('click', function (e) {
   const destination = document.querySelector("#subs");
 
   subscribe(channel, (data) => {
+		console.log(channel, data);
     const li = document.createElement('li');
-    li.innerHTML = data;
+    li.innerHTML = JSON.stringify(data);
 
     destination.appendChild(li);
   });
